@@ -91,7 +91,7 @@ Dataset file:
 ```text
 src/Cleaned_Data.csv
 
-Technology Stack
+##Technology Stack
 Programming & Data Analysis
 Python
 Pandas
@@ -109,7 +109,7 @@ Version Control
 Git
 GitHub
 
-AI Business Analyst
+##AI Business Analyst
 
 One of the main features of the project is the AI Business Analyst.
 
@@ -119,7 +119,7 @@ Instead, Python first calculates verified metrics from the dataset.
 
 These verified metrics are then provided to Gemini for business interpretation.
 
-Workflow
+##Workflow
 Raw Data
    ↓
 Python / Pandas
@@ -174,7 +174,7 @@ Avoid duplicate calculations
 Keep insights unique
 Provide recommendations connected to the finding
 
-Recommendation System
+#Recommendation System
 
 The project separates Business Insights from Recommendations.
 
