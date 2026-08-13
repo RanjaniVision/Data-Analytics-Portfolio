@@ -1,200 +1,106 @@
 # 📞 Call Center Performance Analytics & AI Business Analyst
 
-An interactive **Call Center Performance Analytics** application built using **Python, Pandas, Streamlit, Matplotlib, and Google Gemini AI**.
+An interactive **Call Center Analytics Dashboard** built with Python, Pandas, Streamlit, Matplotlib, and Google Gemini AI to analyze operational performance and convert verified data into business-ready insights.
 
-This project analyzes call-center operational data and converts it into meaningful business metrics, visual insights, evidence-based recommendations, and natural-language business analysis.
+## 🎯 Project Objective
 
-The project follows a simple principle:
+To analyze call-center performance across **call volume, purchase revenue, customer ratings, representatives, cities, and monthly performance**, while using Generative AI to simplify business interpretation.
 
-> **Python calculates the metrics. AI interprets the verified data.**
+## 📊 Key Analysis
 
----
+- Total Calls & Revenue
+- Average Purchase Value
+- Average Customer Rating
+- Representative Performance
+- City-wise Revenue & Call Volume
+- Monthly Performance
+- Customer Rating Distribution
+- Data-driven Business Insights
 
-## 📌 Project Overview
+## 🤖 AI Business Analyst
 
-Call-center data contains valuable information about customer interactions, representatives, purchases, ratings, locations, and call activity.
+The project integrates **Google Gemini AI** as an analytical interpretation layer.
 
-However, raw data alone does not provide an immediate business view.
+**Workflow:**
 
-This project transforms the available operational data into:
+`Dataset → Pandas Analysis → Verified Metrics → Gemini AI → Business Insights`
 
-- Key Performance Indicators (KPIs)
-- Representative performance analysis
-- City-level performance analysis
-- Monthly performance analysis
-- Customer rating analysis
-- Interactive visualizations
-- AI-generated business insights
+The AI generates:
+
+- **5 unique business insights**
+- Data-supported findings
 - Evidence-based recommendations
-- Natural-language business questions
+- Natural-language business analysis
 
-The goal is to demonstrate a practical **Data Analytics + Generative AI** workflow using a real-world business scenario.
+The AI is instructed to avoid **duplicate insights, invented numbers, unsupported assumptions, and conclusions not supported by the dataset.**
 
----
+## 💬 Ask Your Data
 
-## 🎯 Business Objective
+Users can ask business questions in natural language and receive answers based on the available dataset.
 
-The main objective of this project is to analyze call-center performance and provide a simple analytical interface for understanding:
+Example:
 
-- Call volume
-- Purchase revenue
-- Average purchase value
-- Customer satisfaction
-- Representative performance
-- City-level performance
-- Monthly performance variation
+> Which representative generated the highest revenue?
 
-The project also demonstrates how Generative AI can be integrated into a data analytics workflow to help translate verified analytical results into business-friendly insights.
+> Which city contributed the highest revenue?
 
----
+## 🛠️ Tech Stack
 
-## ❓ Business Questions
+- **Python** – Application & analysis
+- **Pandas** – Data processing & aggregation
+- **Matplotlib** – Data visualization
+- **Streamlit** – Interactive dashboard
+- **Google Gemini AI** – AI-powered business analysis
+- **python-dotenv** – API key management
+- **Git & GitHub** – Version control
 
-The application is designed to help answer questions such as:
-
-1. How many calls were handled during the selected period?
-2. What is the total purchase revenue?
-3. What is the average purchase value?
-4. What is the average customer rating?
-5. Which representatives handled the highest number of calls?
-6. Which representative generated the highest purchase revenue?
-7. Which cities contributed the highest revenue?
-8. How does call volume vary across cities?
-9. How does revenue vary across months?
-10. What measurable performance patterns require further analysis?
-
----
-
-## 📊 Dataset
-
-The project uses a cleaned call-center dataset containing operational and customer-related information.
-
-### Main Dataset Columns
-
-| Column | Description |
-|---|---|
-| `Call number` | Call reference number |
-| `Customer ID` | Customer identifier |
-| `Duration` | Call duration |
-| `Representative` | Representative handling the call |
-| `Date of Call` | Date of customer interaction |
-| `Purchase` | Purchase amount associated with the call |
-| `Rating` | Customer rating |
-| `Month` | Month of the call |
-| `Customer ID.1` | Additional customer identifier |
-| `Gender` | Customer gender |
-| `Age` | Customer age |
-| `City` | Customer city |
-
-Dataset file:
+## 📂 Project Structure
 
 ```text
-src/Cleaned_Data.csv
+Call_Center_performance/
+│
+├── src/
+│   ├── app_ai.py
+│   ├── utils.py
+│   └── Cleaned_Data.csv
+│
+├── requirements.txt
+└── README.md
 
-##Technology Stack
-Programming & Data Analysis
-Python
-Pandas
-NumPy
-Visualization
-Matplotlib
-Application
-Streamlit
-Generative AI
-Google Gemini API
-google-genai
-Environment Management
-python-dotenv
-Version Control
-Git
-GitHub
+Key Skills Demonstrated
 
-##AI Business Analyst
+Data Analytics:
+Python, Pandas, Data Cleaning, GroupBy, KPI Analysis, Business Analysis
 
-One of the main features of the project is the AI Business Analyst.
+Visualization:
+Matplotlib, Streamlit
 
-The purpose is not to allow AI to freely generate business claims.
+Generative AI:
+Gemini API, Prompt Engineering, AI-assisted Business Insights
 
-Instead, Python first calculates verified metrics from the dataset.
+Development:
+Python Application Development, Environment Variables, Git, GitHub
 
-These verified metrics are then provided to Gemini for business interpretation.
+💡 Business Value
 
-##Workflow
-Raw Data
-   ↓
-Python / Pandas
-   ↓
-Verified Calculations
-   ↓
-Structured Prompt
-   ↓
-Gemini AI
-   ↓
-Business Interpretation
+This project demonstrates how traditional data analysis and Generative AI can work together:
 
-This approach helps reduce:
+Reliable Calculations → Clear Visuals → AI-assisted Interpretation → Business Insights
 
-Unsupported assumptions
-Invented numbers
-Duplicate insights
-Unverified business conclusions
-💡 Business Insights
+A key design principle of the project is:
 
-The Generate Business Insights feature produces five structured insights.
+Python calculates. AI interprets.
 
-Each insight contains:
+This keeps numerical analysis data-driven while using AI to communicate findings in a business-friendly way.
 
-Business Title
+🚀 Run Locally
+pip install -r requirements.txt
+streamlit run src/app_ai.py
 
-Finding:
-Data-supported observation.
+Configure the Gemini API key through a local .env file before running the application.
 
-Recommendation:
-A practical recommendation logically connected
-to the finding.
-Example
-[Revenue Concentration]
+📌 Project Outcome
 
-Finding:
-Cleveland generated 37,692.02, representing 39.06%
-of total revenue.
+This project demonstrates practical experience in building an end-to-end Data Analytics + Generative AI application, from data processing and KPI development to interactive visualization and AI-assisted business analysis.
 
-Recommendation:
-Compare Cleveland's call volume, average purchase,
-and rating with other cities to identify measurable
-differences in regional performance.
 
-The AI is instructed to:
-
-Use only verified metrics
-Avoid invented numbers
-Avoid unsupported assumptions
-Avoid causal claims
-Avoid duplicate calculations
-Keep insights unique
-Provide recommendations connected to the finding
-
-#Recommendation System
-
-The project separates Business Insights from Recommendations.
-
-Business Insights answer:
-
-What does the data show?
-
-Recommendations answer:
-
-What action should be considered based on the available evidence?
-
-Recommendations are generated using the verified analytical metrics.
-
-The system avoids recommendations involving unavailable information such as:
-
-Staffing capacity
-Marketing budgets
-Profit margins
-Customer retention
-Market share
-Pricing strategy
-
-unless those metrics are actually available in the dataset
