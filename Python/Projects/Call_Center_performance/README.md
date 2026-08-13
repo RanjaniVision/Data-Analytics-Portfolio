@@ -90,3 +90,111 @@ Dataset file:
 
 ```text
 src/Cleaned_Data.csv
+
+Technology Stack
+Programming & Data Analysis
+Python
+Pandas
+NumPy
+Visualization
+Matplotlib
+Application
+Streamlit
+Generative AI
+Google Gemini API
+google-genai
+Environment Management
+python-dotenv
+Version Control
+Git
+GitHub
+
+AI Business Analyst
+
+One of the main features of the project is the AI Business Analyst.
+
+The purpose is not to allow AI to freely generate business claims.
+
+Instead, Python first calculates verified metrics from the dataset.
+
+These verified metrics are then provided to Gemini for business interpretation.
+
+Workflow
+Raw Data
+   ↓
+Python / Pandas
+   ↓
+Verified Calculations
+   ↓
+Structured Prompt
+   ↓
+Gemini AI
+   ↓
+Business Interpretation
+
+This approach helps reduce:
+
+Unsupported assumptions
+Invented numbers
+Duplicate insights
+Unverified business conclusions
+💡 Business Insights
+
+The Generate Business Insights feature produces five structured insights.
+
+Each insight contains:
+
+Business Title
+
+Finding:
+Data-supported observation.
+
+Recommendation:
+A practical recommendation logically connected
+to the finding.
+Example
+[Revenue Concentration]
+
+Finding:
+Cleveland generated 37,692.02, representing 39.06%
+of total revenue.
+
+Recommendation:
+Compare Cleveland's call volume, average purchase,
+and rating with other cities to identify measurable
+differences in regional performance.
+
+The AI is instructed to:
+
+Use only verified metrics
+Avoid invented numbers
+Avoid unsupported assumptions
+Avoid causal claims
+Avoid duplicate calculations
+Keep insights unique
+Provide recommendations connected to the finding
+
+Recommendation System
+
+The project separates Business Insights from Recommendations.
+
+Business Insights answer:
+
+What does the data show?
+
+Recommendations answer:
+
+What action should be considered based on the available evidence?
+
+Recommendations are generated using the verified analytical metrics.
+
+The system avoids recommendations involving unavailable information such as:
+
+Staffing capacity
+Marketing budgets
+Profit margins
+Customer retention
+Market share
+Pricing strategy
+
+unless those metrics are actually available in the dataset
